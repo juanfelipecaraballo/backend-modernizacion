@@ -11,8 +11,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       host: 'localhost', // o IP de tu contenedor/servidor
       port: 5432,
       username: 'postgres',
-      password: 'root',
-      database: 'postgres',
+      password: '1234',
+      database: 'conaltracop',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: false, // ⚠️ nunca en producción si ya tienes tablas
     }),
