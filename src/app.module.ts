@@ -8,13 +8,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost', // o IP de tu contenedor/servidor
+      host: 'db', // o IP de tu contenedor/servidor
       port: 5432,
       username: 'postgres',
       password: '1234',
       database: 'conaltracop',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: false, // ⚠️ nunca en producción si ya tienes tablas
+      synchronize: true, // ⚠️ nunca en producción si ya tienes tablas
     }),
     UsersModule, AuthModule],
   controllers: [AppController],

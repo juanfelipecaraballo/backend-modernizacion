@@ -15,6 +15,7 @@ export class UsersService {
   }
 
   async create(userData: Partial<User>): Promise<User> {
+    console.log('RECIBIDO DESDE POSTMAN:', userData);
     const user = this.userRepo.create(userData);
     return this.userRepo.save(user);
   }
